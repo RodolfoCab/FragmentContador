@@ -27,25 +27,7 @@ public class FragmentContador extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_contador, container, false);
-
-        mContador = (EditText) v.findViewById(R.id.conta);
-        mBotoncontar = (Button) v.findViewById(R.id.jboton);
-        mBotonreiniciar = (Button) v.findViewById(R.id.inicio);
-
-        mBotoncontar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                inicio++;
-                mContador.setText(inicio+"");
-            }
-        });
-        mBotonreiniciar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                inicio = 0;
-                mContador.setText("0");
-            }
-        });
+        
 
         return v;
     }
